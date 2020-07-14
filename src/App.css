@@ -8,6 +8,39 @@ body{
   max-width: 900px;
   margin: 2rem auto 0 auto;
   padding: 1rem;
+  background-color: rgb(255, 255, 255);
+  font-size: 1rem;
+  box-shadow: 1px 1px 9px 7px #36181833;
+  color: #282c34;
+}
+.container{
+  padding: 0 1rem;
+  text-align: right;
+}
+.add-post{
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 1rem;
+  padding: 1rem;
+}
+.post{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 9px 7px #36181833;
+  padding: .5rem;
+}
+.posts div{
+  box-shadow: 1px 1px 1px rgb(182, 235, 171);
+  padding: .5rem;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
 }
 
 .app-logo{
@@ -27,12 +60,6 @@ body{
   color: white;
 }
 
-
-input,textarea{
-  margin: .3rem;
-  padding: 1rem;
-  font-size: 1.2rem;
-}
 button{
   width: 30%;
   background-color: rgb(9, 142, 248);
@@ -45,6 +72,13 @@ button{
   cursor: pointer;
   margin-top: 15px;
 }
+
+input,textarea{
+  margin: .3rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
 
 
 .user-liked{
@@ -91,8 +125,13 @@ button:hover{
   border-radius: 0px;
   background-color: #45a049;
 }
-  div{
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-  }
+div{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.close{
+  width: 40px;
+  border-radius: 150px;
+  float: right;
+}
