@@ -24,7 +24,7 @@ class DisplayPost extends Component{
         
     }
     componentWillUnmount() {
-        this.createPostListener.subscribe()
+        //this.createPostListener.subscribe
     }
 
     getPosts = async ()=> {
