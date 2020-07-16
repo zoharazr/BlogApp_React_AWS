@@ -4,6 +4,7 @@ import { API , graphqlOperation } from 'aws-amplify'
 import DeletePost from './DeletePost'
 import EditPost from './EditPost'
 import { onCreatePost, onDeletePost, onUpdatePost } from '../graphql/subscriptions'
+import CreateComment from './CreateComment'
 
 class DisplayPost extends Component{
     
@@ -52,9 +53,6 @@ class DisplayPost extends Component{
     getPosts = async ()=> {
         const result = await API.graphql(graphqlOperation(listPosts));
         this.setState({posts: result.data.listPosts.items})
-        //console.log("All posts: ", JSON.stringify(result.data.listPosts.items))
-        //console.log("All posts: ", result.data.listPosts.items);
-
     }
     render(){
         const { posts } = this.state
@@ -78,6 +76,11 @@ class DisplayPost extends Component{
                     <span>
                         <DeletePost data={post}/>
                         <EditPost {...post}/>
+                    </span>
+
+                    <span>
+                        <CreateComment postId={post.id}/>
+
                     </span>
                 </div>
 
