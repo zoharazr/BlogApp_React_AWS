@@ -15,7 +15,7 @@ class CreateComment extends Component{
         await Auth.currentUserInfo()
             .then(user => {
                 this.setState({
-                    commentOwnerId:user.attributes.sub,
+                    commentOwnerId: user.attributes.sub,
                     commentOwnerUsername:user.username
                 })
             })
@@ -27,7 +27,7 @@ class CreateComment extends Component{
         event.preventDefault()
 
         const input ={ 
-            commentPostId: this.props.PostId,
+            commentPostId: this.props.postId,
             commentOwnerId:this.state.commentOwnerId,
             commentOwnerUsername:this.state.commentOwnerUsername,
             content: this.state.content,
